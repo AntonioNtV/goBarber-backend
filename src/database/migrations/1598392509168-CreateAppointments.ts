@@ -1,5 +1,15 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
+/**
+ * Linha do Tempo
+ *
+ * Primeira semana: Agendamentos
+ * Segunda semana: Usuárops
+ *
+ * Terceira semana: (NOVO DEV) Edição em Agendamentos
+ * Quarta semana: Compras
+ *p
+ */
 export default class CreateAppointments1598392509168
     implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
@@ -32,14 +42,3 @@ export default class CreateAppointments1598392509168
         await queryRunner.dropTable('appointments');
     }
 }
-
-/**
- * Linha do Tempo
- *
- * Primeira semana: Agendamentos
- * Segunda semana: Usuárops
- *
- * Terceira semana: (NOVO DEV) Edição em Agendamentos
- * Quarta semana: Compras
- *p
- */
